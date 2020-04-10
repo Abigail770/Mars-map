@@ -1,6 +1,7 @@
 body {
     overflow-x: hidden;
     overflow-y: hidden;
+    font-family: sans-serif;
 }
 
 #map {
@@ -13,3 +14,47 @@ body {
     background-color: #7F5336;
     z-index: -1;
 }
+
+button {
+    display: block;
+    width: 100px;
+    border-radius: 4px;
+    border: 2px solid #7F5336;
+}
+
+button:hover{
+    background-color: rgb(87, 56, 36);
+}
+
+#rover-buttons {
+    z-index: 999;
+    position: relative;
+    top: 125px;
+    float: right;
+    margin: 10px;
+}
+
+.btn-info {
+    z-index: 999;
+    position: relative;
+    top: 110px;
+    float: right;
+    background-color: white;
+    color: grey;
+    border: none;
+}
+
+.btn-info:hover {
+    background-color: rgb(87, 56, 36);
+}
+
+.btn-primary {
+    background-color:  white;
+    color: grey;
+    border: 1px solid #7F5336;
+}
+
+.btn-primary:hover {
+    background-color:   rgb(87, 56, 36);
+}
+

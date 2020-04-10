@@ -14,7 +14,6 @@ function main() {
 
 }
 
-
-
 // Run main function when dom is ready
 $(document).ready(main());
+
