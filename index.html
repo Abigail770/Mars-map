@@ -18,7 +18,11 @@
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="lib/leaflet/leaflet.css">
     
-	<!-- Mars Rover Style -->
+   <!-- Leaflet ZoomHome CSS -->
+    <link rel="stylesheet" href="css/leaflet.zoomhome.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+   
+    <!-- Mars Rover Style -->
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -37,24 +41,52 @@
                   <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Services</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Portfolio</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutModal">About</a>
                </li>
             </ul>
          </div>
       </div>
    </nav>
-    
-    <!-- Map -->
-    <div id="map"></div>
+
+   <!-- Rover buttons -->
+   <div id="rover-buttons">
+      <button type="button">
+         Spirit
+      </button>
+
+      <button type="button">
+         Opportunity
+      </button>
+
+      <button type="button">
+         Curiosity
+      </button>
+   </div>
+
+   <!-- Map -->
+   <div id="map"></div>
+
+   <!-- Modal About -->
+   <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="aboutModalLabel">About this Map</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            View the path's of Mars rovers Opportunity, Spirit and Curiosity by
+            clicking the name of each rover.  Then view the map in story mode to 
+            explore each rover's journey over time.
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+      </div>
+   </div>
 
 	<!-- Coding End -->
 
@@ -65,6 +97,9 @@
     <!-- Leaflet -->
     <script src="lib/leaflet/leaflet.js"></script>
     
+    <!-- Leaflet ZoomHome -->
+    <script src="lib/leaflet.zoomhome.min.js"></script>
+
     <!-- Map setup -->
     <script src="js/map.js"></script>
     

@@ -11,15 +11,22 @@ var basemaps = {
 
 function setup_map() {
     var map = L.map('map', {
+        zoomControl: false,
         minZoom: 2,
         maxZoom: 5
     }).setView([0, 0], 3);
+
+    // Add Leaflet zoom home control
+    var zoomHome = L.Control.zoomHome();
+    zoomHome.addTo(map);
 
     set_basemap(map, 'MarsTexture');
     
     // Set map top == navbar height so the navbar will not hide the top of it
     $('#map').css('top', $('#navbar').outerHeight());
     
+    // Add basemap toggler
+    L.control.layers(basemaps).addTo(map);
     
     return map
 }
