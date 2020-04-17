@@ -13,8 +13,14 @@ function setup_map() {
     var map = L.map('map', {
         zoomControl: false,
         minZoom: 2,
-        maxZoom: 5
+        maxZoom: 5,
+        // Max bounds are set to allow user to scroll east and west and restricts scrolling at the poles 
+        maxBounds: [
+        [-90, -Infinity],
+        [90, Infinity]
+        ]
     }).setView([0, 0], 3);
+   
 
     // Add Leaflet zoom home control
     var zoomHome = L.Control.zoomHome();
