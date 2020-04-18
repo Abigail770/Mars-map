@@ -8,9 +8,14 @@ function main() {
     map = setup_map();
 
     // Display splash screen
-
+    $('#splashscreen').modal('show');
 
     // Set event listeners
+    
+    //// Close splash screen
+    $('#splash-btn').on('click', function() {
+        $('#splashscreen').modal('hide');
+    })
 
 }
 

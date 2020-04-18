@@ -1,110 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#192f41" />
 
-	<title>Mars Rover Explorer</title>
+    <title>Mars Rover Explorer</title>
 
-	<link rel="shortcut icon" href="" type="image/x-icon">
-	<link rel="apple-touch-icon" href="">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="apple-touch-icon" href="">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="lib/leaflet/leaflet.css">
-    
-   <!-- Leaflet ZoomHome CSS -->
+
+    <!-- Leaflet ZoomHome CSS -->
     <link rel="stylesheet" href="css/leaflet.zoomhome.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
-   
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
     <!-- Mars Rover Style -->
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-	<!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <div class="container">
-         <a class="navbar-brand" href="#">Mars Rover Explorer</a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-               <li class="nav-item active">
-                  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutModal">About</a>
-               </li>
-            </ul>
-         </div>
-      </div>
-   </nav>
-
-   <!-- Rover buttons -->
-   <div id="rover-buttons">
-      <button type="button">
-         Spirit
-      </button>
-
-      <button type="button">
-         Opportunity
-      </button>
-
-      <button type="button">
-         Curiosity
-      </button>
-   </div>
-
-   <!-- Map -->
-   <div id="map"></div>
-
-   <!-- Modal About -->
-   <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="aboutModalLabel">About this Map</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-blue fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mars Rover Explorer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-         </div>
-         <div class="modal-body">
-            View the path's of Mars rovers Opportunity, Spirit and Curiosity by
-            clicking the name of each rover.  Then view the map in story mode to 
-            explore each rover's journey over time.
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-         </div>
-      </div>
-      </div>
-   </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutModal">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-	<!-- Coding End -->
+    <!-- Rover buttons -->
+    <div id="rover-buttons">
+        <button type="button">
+            Spirit
+        </button>
 
-	<!-- jQuery, Bootstrap -->
+        <button type="button">
+            Opportunity
+        </button>
+
+        <button type="button">
+            Curiosity
+        </button>
+    </div>
+
+    <!-- Map -->
+    <div id="map"></div>
+
+    <!-- Modal About -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutModalLabel">About this Map</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    View the path's of Mars rovers Opportunity, Spirit and Curiosity by
+                    clicking the name of each rover. Then view the map in story mode to
+                    explore each rover's journey over time.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Splash Screen -->
+    <div class="modal fade" id="splashscreen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="splashImg" src="img/OpportunitySplash.jpg">
+                </div>
+                <div class="modal-body">
+                    <h3>Mars Rover Explorer</h3>
+                    <hr>
+                    <p>For nearly two decades NASA has explored the surface of Mars robotically using rovers, sending back amazing data and images to earth for further study. Using this map, you will learn about three of NASA's rovers - Spirit, Opportunity, and Curiosity - as you explore the surface of Mars from the comfort of your home on Earth.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="splash-btn" class="btn btn-blue">Start Exploring</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coding End -->
+
+    <!-- jQuery, Bootstrap -->
     <script src="lib/jquery-3.4.1.js"></script>
     <script src="lib/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-    
+
     <!-- Leaflet -->
     <script src="lib/leaflet/leaflet.js"></script>
-    
+
     <!-- Leaflet ZoomHome -->
     <script src="lib/leaflet.zoomhome.min.js"></script>
 
     <!-- Map setup -->
     <script src="js/map.js"></script>
-    
+
     <!-- main.js -->
     <script src="js/main.js"></script>
-    
-</body>
-</html>
+
+</body></html>
