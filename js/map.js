@@ -9,6 +9,15 @@ var basemaps = {
     })
 }
 
+// Rover landing cordinates
+var rovers = [
+    ["Opportunity",-1.9462,354.4734],
+    ["Spirit",-14.5684,175.472636],
+    ["Curiosity",-4.5895,137.4417]
+];
+
+
+
 function setup_map() {
     var map = L.map('map', {
         zoomControl: false,
@@ -19,7 +28,17 @@ function setup_map() {
         [-90, -Infinity],
         [90, Infinity]
         ]
-    }).setView([0, 0], 3);
+    }).setView([-14.5684,175.472636], 2);
+    
+    
+   //Add Rover Markers
+   //var marker = L.marker([-1.9462,354.4734]).addTo(map);
+   for (var i = 0; i < rovers.length; i++) {
+        marker = new L.marker([rovers[i][1],rovers[i][2]])
+            .bindPopup(rovers[i][0])
+            .addTo(map);
+   };
+
    
 
     // Add Leaflet zoom home control
@@ -36,6 +55,7 @@ function setup_map() {
     
     return map
 }
+
 
 // Change the basemap of the main map
 //// Need to fix this so that it removes the current basemap before adding new one
