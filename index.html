@@ -51,15 +51,15 @@
 
     <!-- Rover buttons -->
     <div id="rover-buttons">
-        <button type="button">
+        <button id="spirit" type="button" value="show/hide">
             Spirit
         </button>
 
-        <button type="button">
+        <button id="opportunity" type="button" value="show/hide">
             Opportunity
         </button>
 
-        <button type="button">
+        <button id="curiosity" type="button" value="show/hide">
             Curiosity
         </button>
     </div>
@@ -103,6 +103,119 @@
                 </div>
                 <div class="modal-footer">
                     <button id="splash-btn" class="btn btn-blue">Start Exploring</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals for Story Mode: Opportunity -->
+    <div class="modal fade" id="endeavor-rim" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/6880/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Endeavor Rim</h3>
+                    <hr>
+                    <p>This image was taken on Dec 11, 2014 and captures Opportunity’s robotic arm examining bedrock in the crater. Of interest to researchers was how these rocks got there and if they could have possibly been transported by water in the past.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="endeavor-btn" class="btn btn-blue">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="knudsen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/7714/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Knudsen Ridge</h3>
+                    <hr>
+                    <p>This photo shows Knudsen Ridge which is located on the rim of Marathon Valley. Of interest to NASA was areas known as red zones. These areas have smaller material that can be analyzed by the rover to help discover the presence of past water on the Red Planet. Opportunity showed amazing climbing skills scaling slopes as much as 20 percent in its mission to Knudsen Ridge.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="knudsen-back-btn" class="btn btn-blue">Back</button>
+                    <button id="knudsen-btn" class="btn btn-blue">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="marathon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/7862/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Marathon Valley</h3>
+                    <hr>
+                    <p>This photo shows Marathon Valley which is located within the Endeavor Crater. This valley is named after the milestone that was reached by Opportunity traveling over 26 miles on Mars surface which is equivalent to a marathon race.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="marathon-back-btn" class="btn btn-blue">Back</button>
+                    <button id="marathon-btn" class="btn btn-blue">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="rocheport" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/8349/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Rocheport</h3>
+                    <hr>
+                    <p>This picture shows the western rim of the Endeavor Crater from images taken on Feb 25, 2017. The perpendicular areas that are carved out in the ridge were of special interest to researchers since they are believed to have formed by erosion from either ice, water, or wind.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="rocheport-back-btn" class="btn btn-blue">Back</button>
+                    <button id="rocheport-btn" class="btn btn-blue">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="orion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/8755/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Orion</h3>
+                    <hr>
+                    <p>This photo is of the Orion Crater which is named after the Apollo 16 lunar mission. Orion Crater is a relatively new feature on the surface of Mars estimated to be only 10 million years old. Orion Crater at 90 feet in width is much smaller than the Endeavor Crater which is near 14 miles wide.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="orion-back-btn" class="btn btn-blue">Back</button>
+                    <button id="orion-btn" class="btn btn-blue">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="perseverance-valley" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/22508/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Perseverance Valley</h3>
+                    <hr>
+                    <p>This image from Perseverance Valley shows Opportunity’s tracks using images from its navigation camera. Perseverance Valley is the last location on Opportunity’s 15-year journey. NASA lost communication with Opportunity on June 10, 2018 after a massive dust storm hit the area.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="perseverance-back-btn" class="btn btn-blue">Back</button>
                 </div>
             </div>
         </div>
