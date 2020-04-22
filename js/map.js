@@ -28,13 +28,18 @@ function setup_map() {
         [-90, -Infinity],
         [90, Infinity]
         ]
-    }).setView([-14.5684,175.472636], 2);
+    }).setView([-14.5684,240.472636], 2.5);
     
     
    //Add Rover Markers
    //var marker = L.marker([-1.9462,354.4734]).addTo(map);
    for (var i = 0; i < rovers.length; i++) {
-        marker = new L.marker([rovers[i][1],rovers[i][2]])
+        circle = new L.circle([rovers[i][1],rovers[i][2]],{
+            color: 'red',
+            fillColor: '#192f41',
+            fillOpacity: 0.25,
+            radius: 500000
+        })
             .bindPopup(rovers[i][0])
             .addTo(map);
    };
