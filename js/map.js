@@ -1,3 +1,4 @@
+// Basemaps for main map
 var basemaps = {
     "MarsTexture": L.tileLayer('http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/celestia_mars-shaded-16k_global/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openplanetary.org/opm-basemaps/shaded-mars-surface-texture">Open Planetary</a>',
@@ -7,6 +8,29 @@ var basemaps = {
         attribution: '&copy; <a href="https://www.openplanetary.org/opm-basemaps/shaded-mars-surface-texture">Open Planetary</a>',
         tms: true
     })
+}
+
+// Basemaps for rover maps
+var roverBasemaps = {
+    "Curiosity": L.tileLayer('http://www.danielfourquet.com/basemaps/Curiosity_Basemap/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openplanetary.org/opm-basemaps/shaded-mars-surface-texture">Open Planetary</a>',
+        tms: true
+        }),
+    "Spirit": L.tileLayer('http://www.danielfourquet.com/basemaps/Spirit_Basemap/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openplanetary.org/opm-basemaps/shaded-mars-surface-texture">Open Planetary</a>',
+        tms: true
+        }),
+    "Opportunity":L.tileLayer('http://www.danielfourquet.com/basemaps/Opportunity_Basemap/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openplanetary.org/opm-basemaps/shaded-mars-surface-texture">Open Planetary</a>',
+        tms: true
+        }),
+}
+
+// Rover paths are loaded in the main.js and stored here as geojson objects
+var roverPaths = {
+    "Curiosity": null,
+    "Spirit": null,
+    "Opportunity": null
 }
 
 // Rover landing cordinates
@@ -34,11 +58,11 @@ function setup_map() {
    // Add Rover Markers
    //var marker = L.marker([-1.9462,354.4734]).addTo(map);
    for (var i = 0; i < rovers.length; i++) {
-        circle = new L.circle([rovers[i][1],rovers[i][2]],{
+        circle = new L.circleMarker([rovers[i][1],rovers[i][2]],{
             color: 'red',
             fillColor: '#192f41',
             fillOpacity: 0.25,
-            radius: 500000
+            radius: 25
         })
             .bindPopup(rovers[i][0])
             .addTo(map);
@@ -118,5 +142,24 @@ function setup_map() {
 // Change the basemap of the main map
 //// Need to fix this so that it removes the current basemap before adding new one
 function set_basemap(map, basemap) {
-    basemaps[basemap].addTo(map);
+    // Remove current basemap
+    map.eachLayer(function(l) {
+        console.log(map);
+        if (l instanceof L.TileLayer) {
+            console.log('remove layer');
+            map.remove(l);
+        }
+    })
+    // Set new basemap
+    if (basemaps[basemap]){
+        // If main map
+        console.log('add basemap');
+        basemaps[basemap].addTo(map);
+    } else {
+        // If rover basemap
+        console.log('add rover basemap');
+        roverBasemaps[basemap].addTo(map);
+    }
+    
+    
 }
