@@ -37,6 +37,7 @@ function toggle_story_mode(map, obj) {
         //// Reset map zoom bounds to default
         map.setMinZoom(2);
         map.setMaxZoom(5);
+        mapsetView([-14.5684,240.472636], 2.5);
 
         storymode = false;
 
@@ -90,6 +91,11 @@ function toggle_story_mode(map, obj) {
         $('#back-btn').on('click', function () {
             prev();
         })
+        
+        $('#main-btn').on('click'), function () {
+            alert('main');
+            toggle_story_mode(map, obj);
+        }
 
         //// Show details panel
         $('#panel').css({'display':'block'});
