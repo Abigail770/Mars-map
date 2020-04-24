@@ -33,7 +33,7 @@ var roverPaths = {
     "Opportunity": null
 }
 
-// Rover landing cordinates
+// Rover landing coordinates
 var rovers = [
     ["Opportunity",-1.9462,354.4734],
     ["Spirit",-14.5684,175.472636],

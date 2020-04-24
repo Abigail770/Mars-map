@@ -64,6 +64,23 @@
         </button>
     </div>
 
+    <!-- Details Panel -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="panel" class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <button id="back-btn" class="btn btn-blue">Back</button>
+                        <button id="main-btn" class="btn btn-blue">Main Map</button>
+                        <button id="next-btn" class="btn btn-blue">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Map -->
     <div id="map"></div>
 
@@ -221,6 +238,139 @@
         </div>
     </div>
 
+    <!-- Modals for Story Mode: Spirit -->
+    <div class="modal fade" id="husband-hill" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/5826/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Husband Hill</h3>
+                    <hr>
+                    <p>This 360 panorama view of the “Inner Basin” was taken from Husband Hill over the course of Sols 672-677 and is made up of 405 images.  The images are color filtered to enhance differences in terrain features.  Husband Hill is visible on the right and left sides of the panorama, with McCool and Ramon Hills rising from the horizon in the center.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="husband-hill-btn" class="btn btn-blue">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="lorre-ridge" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/5831/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Lorre Ridge</h3>
+                    <hr>
+                    <p>This image was taken on Sol 731 in the basin south of Husband Hill.  The image is evidence that Lorre Ridge, along with other landforms in the basin, is made up of basaltic rocks (solidified lava) similar to those found on earth.  These look to be vesicular rocks, formed by trapped gas bubbles which left holes in the rock as lava solidified around the gas.  These geologic findings could tell scientists more about how this area formed. </p>
+                </div>
+                <div class="modal-footer">
+                    <button id="lorre-back-btn" class="btn btn-blue">Back</button>
+                    <button id="lorre-btn" class="btn btn-blue">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="winter-haven" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/4037/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Winter Haven</h3>
+                    <hr>
+                    <p>Winter Haven was so named because Spirit spent a Martian winter parked on it’s slope so that it remained at an angle where its solar panels would be kept at optimal warmth to “survive” the -100 degree Celsius temperatures.  The images composing this panorama, known as the McMurdo panorama, were taken over a series of months between Sol 814-934.  The panorama captures great detail in the rover’s surroundings, from volcanic rocks, meteorites, and the “El Dorado” sand dune field to the rock patterns of Home Plate.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="winter-back-btn" class="btn btn-blue">Back</button>
+                    <button id="winter-btn" class="btn btn-blue">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="engineering-flats" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/4009/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Engineering Flats</h3>
+                    <hr>
+                    <p>This spot was named Engineering Flats after Spirit underwent four sols (Martian days) of repairs here on its right front wheel, in addition to other maintenance.  It is located in the “Columbia Hills”.  Also visible in this image is Hank’s Hollow, where the rover also spent some time.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="flats-back-btn" class="btn btn-blue">Back</button>
+                    <button id="flats-btn" class="btn btn-blue">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="home-plate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/4044/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Home Plate</h3>
+                    <hr>
+                    <p>This rock formation is a part of Home Plate, a location unique for its layered rocks, which can tell scientists a lot about patterns of alternating erosion and deposition here, as well as how the area was formed.  It is speculated that these rocks formed after a volcanic explosion and were then altered over time by wind.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="home-back-btn" class="btn btn-blue">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals for Story Mode: Curiosity -->
+    <div class="modal fade" id="high-dune" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/7581/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>High Dune</h3>
+                    <hr>
+                    <p>This photo was taken with Curiosity’s Mastcam on November 27, 2015, during the Sol 1176 of its time on Mars.  Pictured is High Dune, a part of the Bagnold Dunes on Mount Sharp and the first dune on Mars to be studied at close range.  The dunes are constantly changing, and can move up to a meter each year.  </p>
+                </div>
+                <div class="modal-footer">
+                    <button id="dune-back-btn" class="btn btn-blue">Back</button>
+                    <button id="dune-btn" class="btn btn-blue">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="gale-crater" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/8292/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                    <iframe src='https://mars.nasa.gov/embed/8262/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Gale Crater</h3>
+                    <hr>
+                    <p>Curiosity’s path may seem surprisingly short in miles.  This is its traverse path up to Sol 1596, or its 1596th Martian day.  Up until this point it had driven 9.56 miles (15.39 kilometers).  During Sol 1597 (one Martian day later), it encountered this dust devil in Gale Crater.  Dust devils on Mars, like those on Earth, are caused by rising heat from the ground.  The inset animation in this image shows an accelerated sequence of images taken by Curiosity.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="gale-back-btn" class="btn btn-blue">Back</button>
+                    <button id="gale-btn" class="btn btn-blue">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Coding End -->
 
     <!-- jQuery, Bootstrap -->

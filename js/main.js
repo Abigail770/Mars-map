@@ -46,7 +46,15 @@ function main() {
         map.setMinZoom(12);
         map.fitBounds(roverPaths["Spirit"].getBounds());
         roverPaths['Spirit'].addTo(map);
-        // toggle_story_mode(map);
+
+        // Load json data
+        $.ajax("data/spirit.json", {
+            dataType: "json",
+            success: function(response){
+                var spirObj = response;
+                toggle_story_mode(map, spirObj);
+            }
+        });
     })
     
     //// Click Opportunity button
@@ -56,7 +64,15 @@ function main() {
         map.setMinZoom(9);
         map.fitBounds(roverPaths['Opportunity'].getBounds());
         roverPaths['Opportunity'].addTo(map);
-        // toggle_story_mode(map);
+
+        // Load json data
+        $.ajax("data/opportunity.json", {
+            dataType: "json",
+            success: function(response){
+                var opObj = response;
+                toggle_story_mode(map, opObj);
+            }
+        });
     })
     
     //// Click Curiosity button
@@ -66,7 +82,15 @@ function main() {
         roverBasemaps['Curiosity'].addTo(map);
         map.fitBounds(roverPaths['Curiosity'].getBounds());
         roverPaths['Curiosity'].addTo(map);
-        // toggle_story_mode(map);
+
+        // Load json data
+        $.ajax("data/curiosity.json", {
+            dataType: "json",
+            success: function(response){
+                var curObj = response;
+                toggle_story_mode(map, curObj);
+            }
+        });
     })
 }
 
