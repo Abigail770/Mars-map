@@ -5,14 +5,14 @@ var storymode = false;
 
 function toggle_story_mode(map, obj) {
     if (storymode) {
-        console.log('returning to main map');
         // Code to return main map to normal
 
         //// Remove rover path
+        map.removeLayer(currentPath);
 
 
         //// Remove rover basemap
-        
+
         //// Show Rover buttons
         $('#spirit').show()
         $('#opportunity').show()
@@ -26,27 +26,27 @@ function toggle_story_mode(map, obj) {
         //// Remove details panel
 
 
-        
+
         //// Remove details panel
 
-        
+
         //// Remove details panel
-        $('#panel').css({'display':'none'});
-        
+        $('#panel').css({
+            'display': 'none'
+        });
+
 
         //// Reset map zoom bounds to default
         map.setMinZoom(2);
         map.setMaxZoom(5);
-        mapsetView([-14.5684,240.472636], 2.5);
+        map.setView([-14.5684, 240.472636], 2.5);
 
         storymode = false;
 
     } else {
-        console.log('setting up storymode');
-
         // Code to transition to story mode
-        
-        
+
+
         //Hide Rover Selection Buttons
         $('#spirit').hide()
         $('#opportunity').hide()
@@ -55,9 +55,11 @@ function toggle_story_mode(map, obj) {
         //// Hide basemap selector
         $('.leaflet-control-layers-toggle').hide()
 
-        
+
         //// Show details panel
-        $('#panel').css({'display':'block'});
+        $('#panel').css({
+            'display': 'block'
+        });
 
 
         $('.card-title').html(obj[0].Title);
@@ -66,44 +68,40 @@ function toggle_story_mode(map, obj) {
 
         var current = 0;
 
-        function loop(){
+        function loop() {
             var titleOutput = obj[current].Title;
             var contentOutput = obj[current].Content;
             var media = obj[current].Embed;
-            console.log(titleOutput, contentOutput, media);
             $('.card-title').html(titleOutput);
             $('.card-text').html(contentOutput);
             $('#panel-media').html(media);
         }
-        function next(){
+
+        function next() {
             current++;
             loop();
         }
-        function prev(){
-           current--;
-           loop();
+
+        function prev() {
+            current--;
+            loop();
         }
 
         $('#next-btn').on('click', function () {
-             next();
-        })
+            next();
+        });
 
         $('#back-btn').on('click', function () {
             prev();
-        })
-        
-        $('#main-btn').on('click'), function () {
-            alert('main');
-            toggle_story_mode(map, obj);
-        }
+        });
 
         //// Show details panel
-        $('#panel').css({'display':'block'});
+        $('#panel').css({
+            'display': 'block'
+        });
 
-        
+
         storymode = true;
     }
     console.log('storymode = ' + storymode);
 }
-
-

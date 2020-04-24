@@ -33,6 +33,9 @@ var roverPaths = {
     "Opportunity": null
 }
 
+// The current path object that is being displayed.
+var currentPath = null;
+
 // Rover landing coordinates
 var rovers = [
     ["Opportunity",-1.9462,354.4734],
@@ -144,20 +147,16 @@ function setup_map() {
 function set_basemap(map, basemap) {
     // Remove current basemap
     map.eachLayer(function(l) {
-        console.log(map);
         if (l instanceof L.TileLayer) {
-            console.log('remove layer');
             map.remove(l);
         }
     })
     // Set new basemap
     if (basemaps[basemap]){
         // If main map
-        console.log('add basemap');
         basemaps[basemap].addTo(map);
     } else {
         // If rover basemap
-        console.log('add rover basemap');
         roverBasemaps[basemap].addTo(map);
     }
     

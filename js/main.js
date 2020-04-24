@@ -11,7 +11,8 @@ function main() {
                 let geojson = L.geoJSON(r, {
                     style: {
                         color: "red"
-                    }
+                    },
+                    rover: true
                 });
                 
                 roverPaths[roverName] = geojson;
@@ -45,7 +46,7 @@ function main() {
         map.setMaxZoom(18);
         map.setMinZoom(12);
         map.fitBounds(roverPaths["Spirit"].getBounds());
-        roverPaths['Spirit'].addTo(map);
+        currentPath = roverPaths['Spirit'].addTo(map);
 
         // Load json data
         $.ajax("data/spirit.json", {
@@ -63,7 +64,7 @@ function main() {
         map.setMaxZoom(16);
         map.setMinZoom(9);
         map.fitBounds(roverPaths['Opportunity'].getBounds());
-        roverPaths['Opportunity'].addTo(map);
+        currentPath = roverPaths['Opportunity'].addTo(map);
 
         // Load json data
         $.ajax("data/opportunity.json", {
@@ -81,7 +82,7 @@ function main() {
         map.setMinZoom(10);
         roverBasemaps['Curiosity'].addTo(map);
         map.fitBounds(roverPaths['Curiosity'].getBounds());
-        roverPaths['Curiosity'].addTo(map);
+        currentPath = roverPaths['Curiosity'].addTo(map);
 
         // Load json data
         $.ajax("data/curiosity.json", {
@@ -92,6 +93,14 @@ function main() {
             }
         });
     })
+    
+    // Details panel buttons
+    
+        
+        $('#main-btn').on('click', function () {
+            
+            toggle_story_mode(map, null);
+        });
 }
 
 // Run main function when dom is ready
