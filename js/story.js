@@ -12,10 +12,16 @@ function toggle_story_mode(map, obj) {
 
 
         //// Remove rover basemap
+        
+        //// Show Rover buttons
+        $('#spirit').show()
+        $('#opportunity').show()
+        $('#curiosity').show()
+
 
 
         //// Show basemap selector
-
+        $('.leaflet-control-layers-toggle').show()
 
         //// Remove details panel
 
@@ -38,9 +44,15 @@ function toggle_story_mode(map, obj) {
         console.log('setting up storymode');
 
         // Code to transition to story mode
-
+        
+        
+        //Hide Rover Selection Buttons
+        $('#spirit').hide()
+        $('#opportunity').hide()
+        $('#curiosity').hide()
 
         //// Hide basemap selector
+        $('.leaflet-control-layers-toggle').hide()
 
         //// Show details panel
 
