@@ -56,45 +56,12 @@ function toggle_story_mode(map, obj) {
 
         
         //// Show details panel
+        $('#panel').css({'display':'block'});
 
 
         $('.card-title').html(obj[0].Title);
         $('.card-text').html(obj[0].Content);
         $('#panel-media').html(obj[0].Embed);
-
-        var current = 0;
-
-        function loops(){
-            var titleOutput = obj[current].Title
-            var contentOutput = obj[current].Content
-            $('.card-title').html(titleOutput);
-            $('.card-text').html(contentOutput);
-        }
-        function next(){
-            current++;
-            loop();
-        }
-        function prev(){
-           current--;
-           loop();
-        }
-
-        $('#next-btn').on('click', function () {
-             next();
-        })
-
-        $('#back-btn').on('click', function () {
-            prev();
-        })
-        //// Hide basemap selector
-
-        //// Show details panel
-        $('#panel').css({'display':'block'});
-
-        
-
-        $('.card-title').html(obj[0].Title);
-        $('.card-text').html(obj[0].Content);
 
         var current = 0;
 
@@ -123,7 +90,6 @@ function toggle_story_mode(map, obj) {
         $('#back-btn').on('click', function () {
             prev();
         })
-        //// Hide basemap selector
 
         //// Show details panel
         $('#panel').css({'display':'block'});
