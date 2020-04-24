@@ -42,6 +42,7 @@ function main() {
     
     //// Click Spirit button
     $('#spirit').on('click', function () {
+        $('#spirit-intro').modal('show');
         roverBasemaps['Spirit'].addTo(map);
         map.setMaxZoom(18);
         map.setMinZoom(12);
@@ -60,6 +61,7 @@ function main() {
     
     //// Click Opportunity button
     $('#opportunity').on('click', function () {
+        $('#opportunity-intro').modal('show');
         roverBasemaps['Opportunity'].addTo(map);
         map.setMaxZoom(16);
         map.setMinZoom(9);
@@ -78,6 +80,7 @@ function main() {
     
     //// Click Curiosity button
     $('#curiosity').on('click', function () {
+        $('#curiosity-intro').modal('show');
         map.setMaxZoom(16);
         map.setMinZoom(10);
         roverBasemaps['Curiosity'].addTo(map);

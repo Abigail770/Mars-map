@@ -45,7 +45,17 @@ function toggle_story_mode(map, obj) {
 
     } else {
         // Code to transition to story mode
+        $('#op-intro-btn').on('click', function () {
+            $('#opportunity-intro').modal('hide');
+        })
 
+        $('#spirit-intro-btn').on('click', function () {
+            $('#spirit-intro').modal('hide');
+        })
+
+        $('#curiosity-intro-btn').on('click', function () {
+            $('#curiosity-intro').modal('hide');
+        })
 
         //Hide Rover Selection Buttons
         $('#spirit').hide()
