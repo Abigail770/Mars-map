@@ -88,6 +88,7 @@ function main() {
             dataType: "json",
             success: function(response){
                 var curObj = response;
+                alert('done');
                 toggle_story_mode(map, curObj);
             }
         });

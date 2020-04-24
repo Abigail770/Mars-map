@@ -42,15 +42,17 @@ function toggle_story_mode(map, obj) {
 
         //// Hide basemap selector
 
+        
         //// Show details panel
 
 
         $('.card-title').html(obj[0].Title);
         $('.card-text').html(obj[0].Content);
+        $('#panel-media').html(obj[0].Embed);
 
         var current = 0;
 
-        function loop(){
+        function loops(){
             var titleOutput = obj[current].Title
             var contentOutput = obj[current].Content
             $('.card-title').html(titleOutput);
@@ -85,10 +87,13 @@ function toggle_story_mode(map, obj) {
         var current = 0;
 
         function loop(){
-            var titleOutput = obj[current].Title
-            var contentOutput = obj[current].Content
+            var titleOutput = obj[current].Title;
+            var contentOutput = obj[current].Content;
+            var media = obj[current].Embed;
+            console.log(titleOutput, contentOutput, media);
             $('.card-title').html(titleOutput);
             $('.card-text').html(contentOutput);
+            $('#panel-media').html(media);
         }
         function next(){
             current++;

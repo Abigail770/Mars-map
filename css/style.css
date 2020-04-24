@@ -121,29 +121,64 @@ button:hover {
 
 /* Display Panel */
 #panel {
-    position: relative;
+    position: fixed;
     z-index: 999;
     background: #1f3b51;
     float: right;
     top: 400px;
-    width: auto;
-    height: 100%;
+    left: 0px;
+    right: 0px;
     display: none;
     color: white;
     box-shadow: inset 0px 0px 30px 0px #132331;
+    overflow-y: auto;
 }
 
-#back-btn{
+.panel-btns button {}
+
+#back-btn {
     margin: 10px;
+    float: left;
 }
 
-#next-btn{
+#next-btn {
     float: right;
     margin: 10px;
 }
 
-#main-btn{
+#main-btn {
     margin: 10px;
     text-align: center;
 }
 
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    #panel {
+        position: fixed;
+        z-index: 999;
+        background: #1f3b51;
+        float: right;
+        top: 45px;
+        padding-top: 20px;
+        right: 0px;
+        left: inherit;
+        bottom: 0px;
+        width: 33%;
+        display: none;
+        color: white;
+        box-shadow: inset 0px 0px 30px 0px #132331;
+    }
+
+    #back-btn {
+        margin: 10px;
+        float: left;
+    }
+
+    #next-btn {
+        float: right;
+        margin: 10px;
+    }
+
+}
