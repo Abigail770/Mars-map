@@ -15,20 +15,19 @@ function toggle_story_mode(map, obj) {
 
 
         //// Show basemap selector
-<<<<<<< HEAD
 
 
         //// Remove details panel
 
 
-=======
         
         //// Remove details panel
+
         
         //// Remove details panel
         $('#panel').css({'display':'none'});
         
->>>>>>> 7ff42c356f1639b14ce18107f843588bf305036f
+
         //// Reset map zoom bounds to default
         map.setMinZoom(2);
         map.setMaxZoom(5);
@@ -39,14 +38,13 @@ function toggle_story_mode(map, obj) {
         console.log('setting up storymode');
 
         // Code to transition to story mode
-<<<<<<< HEAD
+
 
         //// Hide basemap selector
 
         //// Show details panel
 
 
-=======
         $('.card-title').html(obj[0].Title);
         $('.card-text').html(obj[0].Content);
 
@@ -80,6 +78,7 @@ function toggle_story_mode(map, obj) {
         $('#panel').css({'display':'block'});
 
         
+
         $('.card-title').html(obj[0].Title);
         $('.card-text').html(obj[0].Content);
 
@@ -113,7 +112,6 @@ function toggle_story_mode(map, obj) {
         $('#panel').css({'display':'block'});
 
         
->>>>>>> 7ff42c356f1639b14ce18107f843588bf305036f
         storymode = true;
     }
     console.log('storymode = ' + storymode);
