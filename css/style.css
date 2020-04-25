@@ -119,6 +119,10 @@ button:hover {
     color: white;
 }
 
+.btn-back {
+    margin-right: 20px;
+}
+
 /* Display Panel */
 #panel {
     position: fixed;

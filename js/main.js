@@ -1,8 +1,8 @@
 function main() {
     // Load data and store as geojson objects    
     load_rover_path('Curiosity', '/data/Curiosity_Traverse.geojson');
-    load_rover_path('Spirit', '/data/Spirit_Traverse.geojson');
-    load_rover_path('Opportunity', '/data/Opportunity_Traverse.geojson');
+    load_rover_path('Spirit', '/data/Spirit_Traverse_Sm.geojson');
+    load_rover_path('Opportunity', '/data/Opportunity_Traverse_Sm.geojson');
 
     function load_rover_path(roverName, filePath) {
         $.ajax(filePath, {
@@ -99,11 +99,16 @@ function main() {
     
     // Details panel buttons
     
-        
+        // Button to return to main map from detail panel
         $('#main-btn').on('click', function () {
-            
             toggle_story_mode(map, null);
         });
+    
+        // Button to cancel starting story mode in rover intro modals
+        $('.btn-back').on('click', function() {
+            toggle_story_mode(map, null);
+            $(this).parents().eq(3).modal('hide');
+        })
 }
 
 // Run main function when dom is ready
