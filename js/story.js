@@ -3,7 +3,10 @@
 // the basemap selector, the rover selection buttons, etc.
 var storymode = false;
 
-function toggle_story_mode(map, obj) {
+var obj;
+var current;
+
+function toggle_story_mode(map, selectedObj) {
     if (storymode) {
         // Code to return main map to normal
 
@@ -41,17 +44,7 @@ function toggle_story_mode(map, obj) {
 
     } else {
         // Code to transition to story mode
-        $('#op-intro-btn').on('click', function () {
-            $('#opportunity-intro').modal('hide');
-        })
-
-        $('#spirit-intro-btn').on('click', function () {
-            $('#spirit-intro').modal('hide');
-        })
-
-        $('#curiosity-intro-btn').on('click', function () {
-            $('#curiosity-intro').modal('hide');
-        })
+        obj = selectedObj
 
         //Hide Rover Selection Buttons
         $('#spirit').hide()
@@ -78,50 +71,19 @@ function toggle_story_mode(map, obj) {
         storyMarker.setLatLng(obj[0].latlng);
         //map.flyTo(obj[0].latlng, 16);
 
-        var current = 0;
+        current = 0;
+        
+         // Disable/enable next/back buttons
+        $('#next-btn').removeClass('disabled');
+        $('#back-btn').removeClass('disabled');
 
-        function loop() {
-            var titleOutput = obj[current].Title;
-            var contentOutput = obj[current].Content;
-            var media = obj[current].Embed;
-            $('.card-title').html(titleOutput);
-            $('.card-text').html(contentOutput);
-            $('#panel-media').html(media);
+        if (current + 1 == obj.length) {
+            $('#next-btn').addClass('disabled');
+        };
 
-            // Set location marker
-            storyMarker.setLatLng(obj[current].latlng);
-            map.flyTo(obj[current].latlng, 16);
-            
-            // Disable/enable next/back buttons
-            $('#next-btn').removeClass('disabled');
-            $('#back-btn').removeClass('disabled');
-            
-            if (current + 1 == obj.length) {
-                $('#next-btn').addClass('disabled');
-            };
-            
-            if (current == 0) {
-                $('#back-btn').addClass('disabled');
-            };
-        }
-
-        function next() {
-            current++;
-            loop();
-        }
-
-        function prev() {
-            current--;
-            loop();
-        }
-
-        $('#next-btn').on('click', function () {
-            next();
-        });
-
-        $('#back-btn').on('click', function () {
-            prev();
-        });
+        if (current == 0) {
+            $('#back-btn').addClass('disabled');
+        };        
 
         //// Show details panel
         $('#panel').css({
