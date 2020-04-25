@@ -180,6 +180,11 @@ button:hover {
     cursor: grab;
 }
 
+iframe {
+    border-width: 0px;
+}
+
+
 @keyframes story-marker-icon-pulse {
     0% {
         box-shadow: 0px 0px 5px 0px red;
@@ -193,6 +198,7 @@ button:hover {
         box-shadow: 0px 0px 5px 0px red;
     }
 }
+
 
 @media only screen and (min-width: 768px) {
 
