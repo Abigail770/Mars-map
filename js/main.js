@@ -1,3 +1,6 @@
+var current = undefined;
+
+
 function main() {
     // Load data and store as geojson objects    
     load_rover_path('Curiosity', 'data/Curiosity_Traverse.geojson');
@@ -63,7 +66,7 @@ function main() {
             dataType: "json",
             success: function(response){
                 var spirObj = response;
-                toggle_story_mode(map, spirObj);
+                toggle_story_mode(map, spirObj,current);
             }
         });
     })
@@ -82,7 +85,8 @@ function main() {
             dataType: "json",
             success: function(response){
                 var opObj = response;
-                toggle_story_mode(map, opObj);
+                console.log(opObj);
+                toggle_story_mode(map, opObj,current);
             }
         });
     })
@@ -101,7 +105,7 @@ function main() {
             dataType: "json",
             success: function(response){
                 var curObj = response;
-                toggle_story_mode(map, curObj);
+                toggle_story_mode(map, curObj, current);
             }
         });
     })

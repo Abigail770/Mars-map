@@ -2,11 +2,12 @@
 // some features of the map will be toggled off, like
 // the basemap selector, the rover selection buttons, etc.
 var storymode = false;
+var current = undefined;
 
 function toggle_story_mode(map, obj) {
     if (storymode) {
         // Code to return main map to normal
-
+        
         //// Remove rover path
         map.removeLayer(currentPath);
 
@@ -40,6 +41,17 @@ function toggle_story_mode(map, obj) {
         storymode = false;
 
     } else {
+        
+        current = 0;
+        
+        if (current == 0) {
+                $('#back-btn').addClass('disabled');
+                $('#next-btn').removeClass('disabled');
+            };
+        
+        
+        console.log(current);
+        console.log(obj);
         // Code to transition to story mode
         $('#op-intro-btn').on('click', function () {
             $('#opportunity-intro').modal('hide');
@@ -78,9 +90,10 @@ function toggle_story_mode(map, obj) {
         storyMarker.setLatLng(obj[0].latlng);
         //map.flyTo(obj[0].latlng, 16);
 
-        var current = 0;
-
+    
         function loop() {
+            console.log('get here')
+            console.log(current);
             var titleOutput = obj[current].Title;
             var contentOutput = obj[current].Content;
             var media = obj[current].Embed;
@@ -93,34 +106,42 @@ function toggle_story_mode(map, obj) {
             map.flyTo(obj[current].latlng, 16);
             
             // Disable/enable next/back buttons
-            $('#next-btn').removeClass('disabled');
+            //$('#next-btn').removeClass('disabled');
             $('#back-btn').removeClass('disabled');
-            
+
             if (current + 1 == obj.length) {
                 $('#next-btn').addClass('disabled');
             };
             
-            if (current == 0) {
-                $('#back-btn').addClass('disabled');
-            };
+            if (current > 1){
+                $('#back-btn').removeClass('disabled');
+            }
+            
+        
         }
 
         function next() {
+            console.log('get here');
+            console.log(current);
             current++;
             loop();
         }
 
         function prev() {
             current--;
-            loop();
+            loop(current);
         }
 
         $('#next-btn').on('click', function () {
             next();
+            
+            console.log(obj);
+            
         });
 
         $('#back-btn').on('click', function () {
             prev();
+             console.log(current)
         });
 
         //// Show details panel
@@ -130,6 +151,7 @@ function toggle_story_mode(map, obj) {
 
 
         storymode = true;
+        
     }
     console.log('storymode = ' + storymode);
 }
