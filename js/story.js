@@ -24,16 +24,12 @@ function toggle_story_mode(map, obj) {
         $('.leaflet-control-layers-toggle').show()
 
         //// Remove details panel
-
-
-
-        //// Remove details panel
-
-
-        //// Remove details panel
         $('#panel').css({
             'display': 'none'
         });
+        
+        //// Remove story marker
+        storyMarker.remove();
 
 
         //// Reset map zoom bounds to default
@@ -70,11 +66,17 @@ function toggle_story_mode(map, obj) {
         $('#panel').css({
             'display': 'block'
         });
+        
+        //// Show story marker
+        storyMarker.addTo(map);
 
 
+        //// Set up initial content
         $('.card-title').html(obj[0].Title);
         $('.card-text').html(obj[0].Content);
         $('#panel-media').html(obj[0].Embed);
+        storyMarker.setLatLng(obj[0].latlng);
+        map.flyTo(obj[0].latlng, 16);
 
         var current = 0;
 
@@ -85,6 +87,22 @@ function toggle_story_mode(map, obj) {
             $('.card-title').html(titleOutput);
             $('.card-text').html(contentOutput);
             $('#panel-media').html(media);
+
+            // Set location marker
+            storyMarker.setLatLng(obj[current].latlng);
+            map.flyTo(obj[current].latlng, 16);
+            
+            // Disable/enable next/back buttons
+            $('#next-btn').removeClass('disabled');
+            $('#back-btn').removeClass('disabled');
+            
+            if (current + 1 == obj.length) {
+                $('#next-btn').addClass('disabled');
+            };
+            
+            if (current == 0) {
+                $('#back-btn').addClass('disabled');
+            };
         }
 
         function next() {
@@ -117,5 +135,16 @@ function toggle_story_mode(map, obj) {
 }
 
 
+
 // Marker that will be used to represent the current location in the
 // story in the map.
+/*
+var storyMarkerIcon = L.divIcon({
+    className: 'story-marker-icon',
+    iconSize: [20, 20]
+});
+*/
+var storyMarkerIcon = L.icon.pulse({iconSize:[20,20],color:'red'})
+var storyMarker = L.marker([-1.230374, 255.058594], {
+    icon: storyMarkerIcon
+});

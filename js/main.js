@@ -111,8 +111,7 @@ function main() {
             $(this).parents().eq(3).modal('hide');
         })
     
-    var storyMarkerIcon = L.divIcon({className: 'story-marker-icon'});
-    var storyMarker = L.marker([-1.230374, 255.058594],{icon:storyMarkerIcon}).addTo(map);
+    
 }
 
 // Run main function when dom is ready
