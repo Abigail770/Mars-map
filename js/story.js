@@ -115,3 +115,7 @@ function toggle_story_mode(map, obj) {
     }
     console.log('storymode = ' + storymode);
 }
+
+
+// Marker that will be used to represent the current location in the
+// story in the map.

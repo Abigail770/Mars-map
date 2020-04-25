@@ -129,9 +129,10 @@ button:hover {
     z-index: 999;
     background: #1f3b51;
     float: right;
-    top: 400px;
+    height: 50%;
     left: 0px;
     right: 0px;
+    bottom: 0px;
     display: none;
     color: white;
     box-shadow: inset 0px 0px 30px 0px #132331;
@@ -156,6 +157,13 @@ button:hover {
 }
 
 
+/* Story marker icon */
+.story-marker-icon {
+    height: 10px;
+    width: 10px;
+    background-color: aqua;
+}
+
 @media only screen and (min-width: 768px) {
 
     /* For desktop: */
@@ -170,6 +178,7 @@ button:hover {
         left: inherit;
         bottom: 0px;
         width: 33%;
+        height: auto;
         display: none;
         color: white;
         box-shadow: inset 0px 0px 30px 0px #132331;

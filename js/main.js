@@ -35,7 +35,7 @@ function main() {
 
     
     // Set event listeners
-
+    map.on('click', function(e) {alert(e.latlng)});
     //// Close splash screen
     $('#splash-btn').on('click', function () {
         $('#splashscreen').modal('hide');
@@ -110,6 +110,9 @@ function main() {
             toggle_story_mode(map, null);
             $(this).parents().eq(3).modal('hide');
         })
+    
+    var storyMarkerIcon = L.divIcon({className: 'story-marker-icon'});
+    var storyMarker = L.marker([-1.230374, 255.058594],{icon:storyMarkerIcon}).addTo(map);
 }
 
 // Run main function when dom is ready
