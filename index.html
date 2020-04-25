@@ -51,17 +51,31 @@
 
     <!-- Rover buttons -->
     <div id="rover-buttons">
-        <button type="button">
+        <button id="spirit" type="button" value="show/hide">
             Spirit
         </button>
 
-        <button type="button">
+        <button id="opportunity" type="button" value="show/hide">
             Opportunity
         </button>
 
-        <button type="button">
+        <button id="curiosity" type="button" value="show/hide">
             Curiosity
         </button>
+    </div>
+
+    <!-- Details Panel -->
+    <div id="panel" class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <div id="panel-media"></div>
+            <p class="card-text"></p>
+            <div class="panel-btns">
+                <button id="back-btn" class="btn btn-blue">Back</button>
+                <button id="next-btn" class="btn btn-blue">Next</button>
+                <button id="main-btn" class="btn btn-blue">Main Map</button>
+            </div>
+        </div>
     </div>
 
     <!-- Map -->
@@ -108,6 +122,66 @@
         </div>
     </div>
 
+    <!-- Modals for Story Mode: Opportunity -->
+    <div class="modal fade" id="opportunity-intro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/5852/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Opportunity</h3>
+                    <hr>
+                    <p>Opportunity was one of two "exploration" rovers.  It launched on July 8, 2003 and landed on Mars at Meridiani Planum on January 25, 2004.  Opportunity broke the record for extraterrestrial travel in 2015, surpassing a 26 mile journey.  Its mission finally ended in February 2019, when it lost contact with Earth for the last time after a dust storm.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-blue btn-back">Back</button> 
+                    <button id="op-intro-btn" class="btn btn-blue">Explore</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals for Story Mode: Spirit -->
+    <div class="modal fade" id="spirit-intro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/5835/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Spirit</h3>
+                    <hr>
+                    <p>Spirit was one of two "exploration" rovers.  It launched on June 10, 2003, landing on Mars at Gusev Crater on January 4, 2004.  Its mission ended on March 22, 2010 - 20 times longer than it was designed to last - after many remarkable findings.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-blue btn-back">Back</button> 
+                    <button id="spirit-intro-btn" class="btn btn-blue">Explore</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals for Story Mode: Curiosity -->
+    <div class="modal fade" id="curiosity-intro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <iframe src='https://mars.nasa.gov/embed/6352/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>
+                </div>
+                <div class="modal-body">
+                    <h3>Curiosity</h3>
+                    <hr>
+                    <p>Curiosity launched from Florida on November 26, 2011.  It landed on Mars on August 5, 2012 and continues its journey there today.  It was the heaviest rover sent to Mars and had a mission to discover whether past conditions on Mars could have harbored microbes.  The rover is about the size of a car and carries 17 cameras, a 7-foot arm to collect samples, 10 scientific tools, a laser to vaporize, and a drill.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-blue btn-back">Back</button>
+                    <button id="curiosity-intro-btn" class="btn btn-blue">Explore</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Coding End -->
 
     <!-- jQuery, Bootstrap -->
@@ -122,6 +196,7 @@
 
     <!-- Map setup -->
     <script src="js/map.js"></script>
+    <script src="js/story.js"></script>
 
     <!-- main.js -->
     <script src="js/main.js"></script>

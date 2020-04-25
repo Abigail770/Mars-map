@@ -1,0 +1,32 @@
+[
+  {
+    "Title": "Husband Hill",
+    "Content": "This 360 panorama view of the �Inner Basin� was taken from Husband Hill over the course of Sols 672-677 and is made up of 405 images.  The images are color filtered to enhance differences in terrain features.  Husband Hill is visible on the right and left sides of the panorama, with McCool and Ramon Hills rising from the horizon in the center.",
+    "Embed": "<iframe src='https://mars.nasa.gov/embed/5826/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>"
+  },
+  {
+    "Title": "Lorre Ridge",
+    "Content": "This image was taken on Sol 731 in the basin south of Husband Hill.  The image is evidence that Lorre Ridge, along with other landforms in the basin, is made up of basaltic rocks (solidified lava) similar to those found on earth.  These look to be vesicular rocks, formed by trapped gas bubbles which left holes in the rock as lava solidified around the gas.  These geologic findings could tell scientists more about how this area formed.",
+    "Embed": "<iframe src='https://mars.nasa.gov/embed/5831/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>"
+  },
+  {
+    "Title": "Winter Haven",
+    "Content": "Winter Haven was so named because Spirit spent a Martian winter parked on it�s slope so that it remained at an angle where its solar panels would be kept at optimal warmth to �survive� the -100 degree Celsius temperatures.  The images composing this panorama, known as the McMurdo panorama, were taken over a series of months between Sol 814-934.  The panorama captures great detail in the rover�s surroundings, from volcanic rocks, meteorites, and the �El Dorado� sand dune field to the rock patterns of Home Plate.",
+    "Embed": "<iframe src='https://mars.nasa.gov/embed/4037/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>"
+  },
+  {
+    "Title": "Engineering Flats",
+    "Content": "This spot was named Engineering Flats after Spirit underwent four sols (Martian days) of repairs here on its right front wheel, in addition to other maintenance.  It is located in the �Columbia Hills�.  Also visible in this image is Hank�s Hollow, where the rover also spent some time.",
+    "Embed": "<iframe src='https://mars.nasa.gov/embed/4009/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>"
+  },
+  {
+    "Title": "Home Plate",
+    "Content": "This rock formation is a part of Home Plate, a location unique for its layered rocks, which can tell scientists a lot about patterns of alternating erosion and deposition here, as well as how the area was formed.  It is speculated that these rocks formed after a volcanic explosion and were then altered over time by wind.",
+    "Embed": "<iframe src='https://mars.nasa.gov/embed/4044/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>"
+  },
+  {
+    "Title": "",
+    "Content": "",
+    "Embed": ""
+  }
+]

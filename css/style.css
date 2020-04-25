@@ -63,14 +63,14 @@ button:hover {
 }
 
 
-/* Splashscreen */
-#splashscreen .modal-content {
+/* Splashscreen and Modals */
+.modal .modal-content {
     border-width: 0px;
     border-radius: 0px;
     box-shadow: 10px 10px 50px black;
 }
 
-#splashscreen .modal-header {
+.modal .modal-header {
     padding: 0px;
     border-width: 0px;
 }
@@ -79,7 +79,7 @@ button:hover {
     max-width: 100%;
 }
 
-#splashscreen .modal-body {
+.modal .modal-body {
     overflow-y: auto;
     height: 200px;
     background-color: #264662;
@@ -90,7 +90,7 @@ button:hover {
     box-shadow: inset 0px 0px 30px 0px #132331;
 }
 
-#splashscreen .modal-footer {
+.modal .modal-footer {
     background-color: #192f41;
     border-width: 0px;
     border-radius: 0px;
@@ -98,7 +98,7 @@ button:hover {
     padding-bottom: 25px;
 }
 
-#splashscreen hr {
+.modal hr {
     border-color: white;
 }
 
@@ -117,4 +117,72 @@ button:hover {
 .btn-blue:hover {
     background: #1f3b51;
     color: white;
+}
+
+.btn-back {
+    margin-right: 20px;
+}
+
+/* Display Panel */
+#panel {
+    position: fixed;
+    z-index: 999;
+    background: #1f3b51;
+    float: right;
+    top: 400px;
+    left: 0px;
+    right: 0px;
+    display: none;
+    color: white;
+    box-shadow: inset 0px 0px 30px 0px #132331;
+    overflow-y: auto;
+}
+
+.panel-btns button {}
+
+#back-btn {
+    margin: 10px;
+    float: left;
+}
+
+#next-btn {
+    float: right;
+    margin: 10px;
+}
+
+#main-btn {
+    margin: 10px;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    #panel {
+        position: fixed;
+        z-index: 999;
+        background: #1f3b51;
+        float: right;
+        top: 45px;
+        padding-top: 20px;
+        right: 0px;
+        left: inherit;
+        bottom: 0px;
+        width: 33%;
+        display: none;
+        color: white;
+        box-shadow: inset 0px 0px 30px 0px #132331;
+    }
+
+    #back-btn {
+        margin: 10px;
+        float: left;
+    }
+
+    #next-btn {
+        float: right;
+        margin: 10px;
+    }
+
 }
