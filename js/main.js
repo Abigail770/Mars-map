@@ -41,6 +41,14 @@ function main() {
         $('#splashscreen').modal('hide');
     })
     
+    
+    //// Stop youtube videos in intro modals
+    $('.btn-intromodal').on('click', function() {
+        $('.yvideo').each(function(){
+            this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+        });
+    })
+    
     //// Click Spirit button
     $('#spirit').on('click', function () {
         $('#spirit-intro').modal('show');
