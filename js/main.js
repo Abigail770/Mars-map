@@ -1,8 +1,8 @@
 function main() {
     // Load data and store as geojson objects    
-    load_rover_path('Curiosity', '../data/Curiosity_Traverse.geojson');
-    load_rover_path('Spirit', '../data/Spirit_Traverse_Sm.geojson');
-    load_rover_path('Opportunity', '../data/Opportunity_Traverse_Sm.geojson');
+    load_rover_path('Curiosity', 'data/Curiosity_Traverse.geojson');
+    load_rover_path('Spirit', 'data/Spirit_Traverse_Sm.geojson');
+    load_rover_path('Opportunity', 'data/Opportunity_Traverse_Sm.geojson');
 
     function load_rover_path(roverName, filePath) {
         $.ajax(filePath, {
