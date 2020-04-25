@@ -17,8 +17,9 @@ function main() {
                 
                 roverPaths[roverName] = geojson;
             },
-            error: function () {
+            error: function (a,b,c) {
                 console.log('Error loading ' + filePath);
+                console.log(a, b, c);
                 roverPaths[roverName] = null;
             }
         })
