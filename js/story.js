@@ -89,7 +89,7 @@ function toggle_story_mode(map, obj) {
         $('.card-text').html(obj[0].Content);
         $('#panel-media').html(obj[0].Embed);
         storyMarker.setLatLng(obj[0].latlng);
-        //map.flyTo(obj[0].latlng, 16);
+        map.flyTo(obj[0].latlng, 16);
 
         var current = 0;
 
