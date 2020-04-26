@@ -36,11 +36,24 @@ function main() {
     
     // Set event listeners
     map.on('click', function(e) {alert(e.latlng)});
+    
     //// Close splash screen
     $('#splash-btn').on('click', function () {
         $('#splashscreen').modal('hide');
     })
     
+    //// Home button
+    $('#btn-home').on('click', function() {
+        if (storymode) {
+            toggle_story_mode(map, null);
+        };
+    })
+    
+    $('.leaflet-control-zoomhome-home').on('click', function () {
+        if (storymode) {
+            toggle_story_mode(map, null);
+        };
+    })
     
     //// Stop youtube videos in intro modals
     $('.btn-intromodal').on('click', function() {

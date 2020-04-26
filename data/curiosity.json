@@ -2,37 +2,37 @@
   {
     "Title": "High Dune",
     "Content": "This photo was taken with Curiosity's Mastcam on November 27, 2015, during the Sol 1176 of its time on Mars.  Pictured is High Dune, a part of the Bagnold Dunes on Mount Sharp and the first dune on Mars to be studied at close range.  The dunes are constantly changing, and can move up to a meter each year.",
-    "Embed": "<iframe src='https://mars.nasa.gov/embed/7581/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>",
+    "Embed": "<img src='img/high-dune.jpg' width='100%'></img>",
     "latlng": [-4.678615, 137.362661]
   },
   {
     "Title": "Gale Crater",
     "Content": "Curiosity's path may seem surprisingly short in miles.  This is its traverse path up to Sol 1596, or its 1596th Martian day.  Up until this point it had driven 9.56 miles (15.39 kilometers).  During Sol 1597 (one Martian day later), it encountered this dust devil in Gale Crater.  Dust devils on Mars, like those on Earth, are caused by rising heat from the ground.  The inset animation in this image shows an accelerated sequence of images taken by Curiosity.",
-    "Embed": "<iframe src='https://mars.nasa.gov/embed/8292/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>",
+    "Embed": "<img src='img/gale-crater.gif' width='100%'></img>",
     "latlng": [-4.711549, 137.358713]
   },
   {
     "Title": "Vera Rubin Ridge",
     "Content": "This panorama is composed of six combined images taken by Curiosity's Mastcam during Sol 1589 and is unique in that it reveals four geologic layers.  The red rocks in the foreground are a part of the Murray formation, and the gray rocks in the right middle ground are a part of the Clay Unit.  Between these layers is the Vera Rubin Ridge, and beyond are the higher points of Mount Sharp, a part of the Sulfate Unit.",
-    "Embed": "<iframe src='https://mars.nasa.gov/embed/8810/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>",
+    "Embed": "<img src='img/vera-rubin-ridge.jpg' width='100%'></img>",
     "latlng": [-4.710395, 137.358584]
   },
   {
     "Title": "Duluth",
     "Content": "This view comprises a mosaic of images captured using Curiosity's arm-mounted Mars Hand Lens Imager (MAHLI) during Sol 2082.  Duluth was a site on Mount Sharp at which Curiosity drilled to collect rock samples.  This image, taken in June 2018, was the first time the rover�s drill had been used since October 2016 due to mechanical issues.  The rim of the Gale Crater in the background of this image is obscured by a dust storm.",
-    "Embed": "<iframe src='https://mars.nasa.gov/embed/21929/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>",
+    "Embed": "<img src='img/duluth.jpg' width='100%'></img>",
     "latlng": [-4.727545, 137.378197]
   },
   {
     "Title": "Rock Hall",
     "Content": "This 360 panorama comprises 122 images captured by Curiosity's Mastcam.  The image, taken during Sol 2265, shows the clay area the rover is headed, as well as the Vera Rubin Ridge where it previously drilled.",
-    "Embed": "<iframe src='https://mars.nasa.gov/embed/22288/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>",
+    "Embed": "<img src='img/rock-hall.jpg' width='100%'></img>",
     "latlng": [-4.728743, 137.378926]
   },
   {
     "Title": "Hutton",
     "Content": "This panorama, taken during Sol 2687, consists of 86 images captured by the rover's arm-mounted Mars Hand Lens Imager (MAHLI).  The crumbling rock on the ridge of the image is the Greenheugh Pediment, where Curiosity journeyed next.  The Hutton Drill Hole is also visible in the image, in the foreground to the left of the rover.",
-    "Embed": "<iframe src='https://mars.nasa.gov/embed/24833/' width='100%' height='400'  scrolling='no' frameborder='0'></iframe>",
+    "Embed": "<img src='img/hutton.jpg' width='100%'></img>",
     "latlng": [-4.735372, 137.380557]
   }
 ]
