@@ -14,18 +14,18 @@ function main() {
                     },
                     rover: true
                 });
-                
+
                 roverPaths[roverName] = geojson;
             },
-            error: function (a,b,c) {
+            error: function (a, b, c) {
                 console.log('Error loading ' + filePath);
                 console.log(a, b, c);
                 roverPaths[roverName] = null;
             }
         })
     }
-    
-    
+
+
 
     // Setup main map
     let map = setup_map();
@@ -33,9 +33,14 @@ function main() {
     // Display splash screen
     $('#splashscreen').modal('show');
 
-    
+
     // Set event listeners
-    map.on('click', function(e) {alert(e.latlng)});
+    map.on('click', function (e) {
+        alert(e.latlng)
+    });
+  
+    map.on('click', function(e) {
+        alert(e.latlng)});
     
     //// Close splash screen
     $('#splash-btn').on('click', function () {
@@ -56,12 +61,12 @@ function main() {
     })
     
     //// Stop youtube videos in intro modals
-    $('.btn-intromodal').on('click', function() {
-        $('.yvideo').each(function(){
+    $('.btn-intromodal').on('click', function () {
+        $('.yvideo').each(function () {
             this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
         });
     })
-    
+
     //// Click Spirit button
     $('#spirit').on('click', function () {
         $('#spirit-intro').modal('show');
@@ -74,13 +79,13 @@ function main() {
         // Load json data
         $.ajax("data/spirit.json", {
             dataType: "json",
-            success: function(response){
+            success: function (response) {
                 var spirObj = response;
                 toggle_story_mode(map, spirObj);
             }
         });
     })
-    
+
     //// Click Opportunity button
     $('#opportunity').on('click', function () {
         $('#opportunity-intro').modal('show');
@@ -93,13 +98,13 @@ function main() {
         // Load json data
         $.ajax("data/opportunity.json", {
             dataType: "json",
-            success: function(response){
+            success: function (response) {
                 var opObj = response;
                 toggle_story_mode(map, opObj);
             }
         });
     })
-    
+
     //// Click Curiosity button
     $('#curiosity').on('click', function () {
         $('#curiosity-intro').modal('show');
@@ -112,27 +117,87 @@ function main() {
         // Load json data
         $.ajax("data/curiosity.json", {
             dataType: "json",
-            success: function(response){
+            success: function (response) {
                 var curObj = response;
                 toggle_story_mode(map, curObj);
             }
         });
     })
-    
+
+
+    // Intro modals
+
+    $('#op-intro-btn').on('click', function () {
+        $('#opportunity-intro').modal('hide');
+    })
+
+    $('#spirit-intro-btn').on('click', function () {
+        $('#spirit-intro').modal('hide');
+    })
+
+    $('#curiosity-intro-btn').on('click', function () {
+        $('#curiosity-intro').modal('hide');
+    })
+
+
     // Details panel buttons
-    
-        // Button to return to main map from detail panel
-        $('#main-btn').on('click', function () {
-            toggle_story_mode(map, null);
-        });
-    
-        // Button to cancel starting story mode in rover intro modals
-        $('.btn-back').on('click', function() {
-            toggle_story_mode(map, null);
-            $(this).parents().eq(3).modal('hide');
-        })
-    
-    
+
+    // Button to return to main map from detail panel
+    $('#main-btn').on('click', function () {
+        toggle_story_mode(map, null);
+    });
+
+    // Button to cancel starting story mode in rover intro modals
+    $('.btn-back').on('click', function () {
+        toggle_story_mode(map, null);
+        $(this).parents().eq(3).modal('hide');
+    })
+
+
+    function loop() {
+        var titleOutput = obj[current].Title;
+        var contentOutput = obj[current].Content;
+        var media = obj[current].Embed;
+        $('.card-title').html(titleOutput);
+        $('.card-text').html(contentOutput);
+        $('#panel-media').html(media);
+
+        // Set location marker
+        storyMarker.setLatLng(obj[current].latlng);
+        map.flyTo(obj[current].latlng, 16);
+
+        // Disable/enable next/back buttons
+        $('#next-btn').removeClass('disabled');
+        $('#back-btn').removeClass('disabled');
+
+        if (current + 1 == obj.length) {
+            $('#next-btn').addClass('disabled');
+        };
+
+        if (current == 0) {
+            $('#back-btn').addClass('disabled');
+        };
+    }
+
+    function next() {
+        current++;
+        loop();
+    }
+
+    function prev() {
+        current--;
+        loop();
+    }
+
+    $('#next-btn').on('click', function () {
+        next();
+    });
+
+    $('#back-btn').on('click', function () {
+        prev();
+    });
+
+
 }
 
 // Run main function when dom is ready
