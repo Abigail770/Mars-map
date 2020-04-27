@@ -31,8 +31,15 @@ function toggle_story_mode(map, selectedObj) {
             'display': 'none'
         });
         
+        //// Resize map for main map
+        $('#map').removeClass('map-storymode');
+        map.invalidateSize();
+        
         //// Remove story marker
         storyMarker.remove();
+        
+        //// Hide home button in navbar
+        $('#btn-home').addClass('disabled');
 
 
         //// Reset map zoom bounds to default
@@ -60,16 +67,22 @@ function toggle_story_mode(map, selectedObj) {
             'display': 'block'
         });
         
+        //// Resize map for storymode
+        $('#map').addClass('map-storymode');
+        map.invalidateSize();
+        
         //// Show story marker
         storyMarker.addTo(map);
 
+        //// Show home button in navbar
+        $('#btn-home').removeClass('disabled');
 
         //// Set up initial content
         $('.card-title').html(obj[0].Title);
         $('.card-text').html(obj[0].Content);
         $('#panel-media').html(obj[0].Embed);
         storyMarker.setLatLng(obj[0].latlng);
-        //map.flyTo(obj[0].latlng, 16);
+        map.flyTo(obj[0].latlng, 16);
 
         current = 0;
         

@@ -71,61 +71,6 @@ function setup_map() {
             .addTo(map);
    };
 
-   // Scroll through Opportunity story mode
-   $('#opportunity').click(function(){   
-       $("#endeavor-rim").modal('show');     
-   });
-
-    $('#endeavor-btn').click(function(){   
-        $("#endeavor-rim").modal('hide');
-        $("#knudsen").modal('show');     
-    });
-
-    $('#knudsen-back-btn').click(function(){   
-        $("#knudsen").modal('hide');
-        $("#endeavor-rim").modal('show');     
-    });
-
-    $('#knudsen-btn').click(function(){   
-        $("#knudsen").modal('hide');
-        $("#marathon").modal('show');     
-    });
-
-    $('#marathon-back-btn').click(function(){   
-        $("#marathon").modal('hide');
-        $("#knudsen").modal('show');     
-    });
-
-    $('#marathon-btn').click(function(){   
-        $("#marathon").modal('hide');
-        $("#rocheport").modal('show');     
-    });
-
-    $('#rocheport-back-btn').click(function(){   
-        $("#rocheport").modal('hide');
-        $("#marathon").modal('show');     
-    });
-
-    $('#rocheport-btn').click(function(){   
-        $("#rocheport").modal('hide');
-        $("#orion").modal('show');     
-    });
-
-    $('#orion-back-btn').click(function(){   
-        $("#orion").modal('hide');
-        $("#rocheport").modal('show');     
-    });
-
-    $('#orion-btn').click(function(){   
-        $("#orion").modal('hide');
-        $("#perseverance-valley").modal('show');     
-    });
-
-    $('#perseverance-back-btn').click(function(){   
-        $("#perseverance-valley").modal('hide');
-        $("#orion").modal('show');     
-    });
-
     // Add Leaflet zoom home control
     var zoomHome = L.Control.zoomHome();
     zoomHome.addTo(map);
