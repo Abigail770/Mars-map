@@ -38,9 +38,6 @@ function main() {
     map.on('click', function (e) {
         alert(e.latlng)
     });
-  
-    map.on('click', function(e) {
-        alert(e.latlng)});
     
     //// Close splash screen
     $('#splash-btn').on('click', function () {
