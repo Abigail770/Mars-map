@@ -78,6 +78,8 @@ button:hover {
 .modal .modal-header {
     padding: 0px;
     border-width: 0px;
+    background-color: #192f41;
+    border-radius: 0px;
 }
 
 .splashImg {
@@ -105,6 +107,15 @@ button:hover {
 
 .modal hr {
     border-color: white;
+}
+
+/* marker modal */
+#marker-modal .modal-dialog {
+    max-width: 300px;
+}
+
+.marker-img {
+    width: 100%;
 }
 
 .btn-blue {

@@ -136,6 +136,11 @@ function main() {
         $('#curiosity-intro').modal('hide');
     })
 
+    
+    // Marker modal
+    $('#marker-btn-close').on('click', function () {
+        $('#marker-modal').modal('hide');
+    })
 
     // Details panel buttons
 

@@ -71,6 +71,22 @@ function setup_map() {
             .addTo(map);
    };
 
+    // Add main map markers
+    for (var i = 0; i < mainMapLandmarks.length; i++ ) {
+        let m = mainMapLandmarks[i];
+        marker = new L.Marker(m.latlng, {
+            title: m.title
+        })
+        .addTo(map);
+        
+        marker.on('click', function() {
+            $('#marker-title').html(m.title);
+            $('#marker-caption').html(m.caption);
+            $('#marker-img').html('<img src="img/landmarks/' + m.image + '" class="marker-img" />');
+            $('#marker-modal').modal('show');
+        })
+    }
+    
     // Add Leaflet zoom home control
     var zoomHome = L.Control.zoomHome();
     zoomHome.addTo(map);

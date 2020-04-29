@@ -187,6 +187,25 @@
             </div>
         </div>
     </div>
+    
+    <!-- Marker Popup -->
+    <div class="modal fade" id="marker-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id='marker-img'></div>
+                </div>
+                <div class="modal-body">
+                    <h3 id='marker-title'></h3>
+                    <hr>
+                    <p id='marker-caption'></p>
+                </div>
+                <div class="modal-footer">
+                    <button id="marker-btn-close" class="btn btn-blue btn-intromodal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Coding End -->
 
@@ -207,6 +226,7 @@
     <!-- Map setup -->
     <script src="js/map.js"></script>
     <script src="js/story.js"></script>
+    <script src="data/markers.js"></script>
 
     <!-- main.js -->
     <script src="js/main.js"></script>
