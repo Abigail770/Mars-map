@@ -38,7 +38,7 @@ button:hover {
 #rover-buttons {
     z-index: 999;
     position: relative;
-    top: 150px;
+    top: 165px;
     float: right;
 }
 
@@ -218,6 +218,14 @@ iframe {
 @media only screen and (min-width: 768px) {
 
     /* For desktop: */
+
+    #rover-buttons {
+        z-index: 999;
+        position: relative;
+        top: 125px;
+        float: right;
+    }
+    
     #panel {
         position: fixed;
         z-index: 999;
