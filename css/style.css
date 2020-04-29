@@ -38,7 +38,7 @@ button:hover {
 #rover-buttons {
     z-index: 999;
     position: relative;
-    top: 125px;
+    top: 150px;
     float: right;
 }
 
