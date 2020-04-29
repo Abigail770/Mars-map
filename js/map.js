@@ -59,13 +59,24 @@ function setup_map() {
     
     
    // Add Rover Markers
+    var curiosityMarker = L.icon({
+        iconUrl: 'img/curiosityMarker.png',
+        iconSize: [75,75],
+        iconAnchor: [37,37]
+    });
+    
+    var spiritMarker = L.icon({
+        iconUrl: 'img/spiritMarker.png',
+        iconSize: [75,75],
+        iconAnchor: [37,37]
+    });
+    
    //var marker = L.marker([-1.9462,354.4734]).addTo(map);
    for (var i = 0; i < rovers.length; i++) {
-        circle = new L.circleMarker([rovers[i][1],rovers[i][2]],{
-            color: 'red',
-            fillColor: '#192f41',
-            fillOpacity: 0.25,
-            radius: 25
+       let icon;
+       rovers[i][0] == 'Curiosity' ? icon = curiosityMarker : icon = spiritMarker;
+        circle = new L.Marker([rovers[i][1],rovers[i][2]],{
+            icon: icon
         })
             .bindPopup(rovers[i][0])
             .addTo(map);
