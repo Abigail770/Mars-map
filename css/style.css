@@ -199,10 +199,6 @@ iframe {
     border-width: 0px;
 }
 
-.fa-home:before {
-    content: "\f015";
-}
-
 
 @keyframes story-marker-icon-pulse {
     0% {
