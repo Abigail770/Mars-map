@@ -72,10 +72,17 @@ function setup_map() {
    };
 
     // Add main map markers
+    let markerIcon = L.icon({
+        iconUrl: 'img/Marker.png',
+        iconSize: [25,25],
+        iconAnchor: [13,22],
+    });
+    
     for (var i = 0; i < mainMapLandmarks.length; i++ ) {
         let m = mainMapLandmarks[i];
         marker = new L.Marker(m.latlng, {
-            title: m.title
+            title: m.title,
+            icon: markerIcon
         })
         .addTo(map);
         

@@ -1,4 +1,11 @@
 [
+    {
+    "Title": "Sunset in Gale Crater",
+    "Content": "NASA's Curiosity Mars rover recorded this sequence of views of the sun setting at the close of the mission's 956th Martian day, or sol (April 15, 2015), from the rover's location in Gale Crater. The four images shown in sequence here were taken over a span of 6 minutes, 51 seconds.",
+    "Embed": "<img src='img/gale_sunset.gif' width='100%'></img>",
+    "latlng": [-4.672951, 137.36927],
+    "sol": "956"
+  },
   {
     "Title": "High Dune",
     "Content": "This photo was taken with Curiosity's Mastcam on November 27, 2015, during the Sol 1176 of its time on Mars.  Pictured is High Dune, a part of the Bagnold Dunes on Mount Sharp and the first dune on Mars to be studied at close range.  The dunes are constantly changing, and can move up to a meter each year.",

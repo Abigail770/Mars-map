@@ -9,7 +9,7 @@ var mainMapLandmarks = [
     */
     {
         title: 'Olympus Mons',
-        caption: 'The largest volcano in the solar system',
+        caption: 'The largest of the volcanoes in the Tharsis Montes region, as well as all known volcanoes in the solar system',
         image: 'olympus-mons.png', // https://mars.nasa.gov/gallery/atlas/olympus-mons.html
         latlng: [18.312811, 226.757813]
     },
@@ -42,5 +42,11 @@ var mainMapLandmarks = [
         caption: 'This image shows sedimentary rock and sand within Danielson Crater, an impact crater about 42 miles or 67 kilometers in diameter, located in the southwest Arabia Terra region of Mars.',
         image: 'danielson-crater.jpg',
         latlng: [7.93,  7.11]
+    },
+    {
+        title: 'Noctis Labyrinthus',
+        caption: 'West of Valles Marineris lies a checkerboard named Noctis Labyrinthus, which formed when the Martian crust stretched and fractured. As faults opened, they released subsurface ice and water, causing the ground to collapse.',
+        image: 'noctis-labyrinthus.jpg',
+        latlng: [-13.3, 263.4]
     },
 ];
