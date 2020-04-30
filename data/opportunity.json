@@ -4,41 +4,41 @@
     "Content": "This image was taken on Dec 11, 2014 and captures Opportunity's robotic arm examining bedrock in the crater. Of interest to researchers was how these rocks got there and if they could have possibly been transported by water in the past.",
     "Embed": "<img src='img/endeavor-rim.jpg' width='100%'></img>",
     "latlng": [-2.304189, -5.357721],
-    "sol": "3854"
+    "sol": "Sol 3854"
   },
   {
     "Title": "Knudsen Ridge",
     "Content": "This photo shows Knudsen Ridge which is located on the rim of Marathon Valley. Of interest to NASA was areas known as red zones. These areas have smaller material that can be analyzed by the rover to help discover the presence of past water on the Red Planet. Opportunity showed amazing climbing skills scaling slopes as much as 20 percent in its mission to Knudsen Ridge.",
     "Embed": "<img src='img/knudsen-ridge.png' width='100%'></img>",
     "latlng": [-2.315097, -5.352412],
-    "sol": "4182"
+    "sol": "Sol 4182"
   },
   {
     "Title": "Marathon Valley",
     "Content": "This photo shows Marathon Valley which is located within the Endeavor Crater. This valley is named after the milestone that was reached by Opportunity traveling over 26 miles on Mars surface which is equivalent to a marathon race.",
     "Embed": "<img src='img/marathon-valley.jpg' width='100%'></img>",
     "latlng": [-2.316023, -5.353653],
-    "sol": "4347"
+    "sol": "Sol 4347"
   },
   {
     "Title": "Rocheport",
     "Content": "This picture shows the western rim of the Endeavor Crater from images taken on Feb 25, 2017. The perpendicular areas that are carved out in the ridge were of special interest to researchers since they are believed to have formed by erosion from either ice, water, or wind.",
     "Embed": "<img src='img/rocheport.png' width='100%'></img>",
     "latlng": [-2.320446, -5.353584],
-    "sol": "4654"
+    "sol": "Sol 4654"
   },
   {
     "Title": "Orion Crater",
     "Content": "This photo is of the Orion Crater which is named after the Apollo 16 lunar mission. Orion Crater is a relatively new feature on the surface of Mars estimated to be only 10 million years old. Orion Crater at 90 feet in width is much smaller than the Endeavor Crater which is near 14 miles wide.",
     "Embed": "<img src='img/orion-crater.png' width='100%'></img>",
     "latlng": [-2.330507, -5.351437],
-    "sol": "4712"
+    "sol": "Sol 4712"
   },
   {
     "Title": "Perseverance Valley",
     "Content": "This image from Perseverance Valley shows Opportunity's tracks using images from its navigation camera. Perseverance Valley is the last location on Opportunity's 15-year journey. NASA lost communication with Opportunity on June 10, 2018 after a massive dust storm hit the area.",
     "Embed": "<img src='img/perseverance-valley.jpg' width='100%'></img>",
     "latlng": [-2.330860, -5.348987],
-    "sol": "5015"
+    "sol": "Sol 5015"
   }
 ]

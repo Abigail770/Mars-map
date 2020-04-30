@@ -79,6 +79,7 @@ function toggle_story_mode(map, selectedObj) {
 
         //// Set up initial content
         $('.card-title').html(obj[0].Title);
+        $('.card-date').html(obj[0].sol);
         $('.card-text').html(obj[0].Content);
         $('#panel-media').html(obj[0].Embed);
         storyMarker.setLatLng(obj[0].latlng);

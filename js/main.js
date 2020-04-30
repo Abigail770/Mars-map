@@ -158,9 +158,11 @@ function main() {
 
     function loop() {
         var titleOutput = obj[current].Title;
+        var dateOutput = obj[current].sol
         var contentOutput = obj[current].Content;
         var media = obj[current].Embed;
         $('.card-title').html(titleOutput);
+        $('.card-date').html(dateOutput);
         $('.card-text').html(contentOutput);
         $('#panel-media').html(media);
 

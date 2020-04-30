@@ -4,7 +4,7 @@
     "Content": "This image mosaic taken by the Mars Exploration Rover Spirit's panoramic camera shows a new slice of martian real estate southwest of the rover's landing site. The landscape shows little variation in local topography, though a narrow peak only seven to eight kilometers away is visible on the horizon. A circular depression, similar to the one dubbed Sleepy Hollow, can be seen in the foreground.",
     "Embed": "<img src='img/spirit-landing.jpg' width='100%'></img>",
     "latlng": [-14.573257, 175.476862],
-    "sol": "1"
+    "sol": "Sol 1"
    },
     
   {
@@ -12,34 +12,35 @@
     "Content": "This spot was named Engineering Flats after Spirit underwent four sols (Martian days) of repairs here on its right front wheel, in addition to other maintenance.  It is located in the Columbia Hills.  Also visible in this image is Hank's Hollow, where the rover also spent some time.",
     "Embed": "<img src='img/engineering-flats.jpg' width='100%'></img>",
     "latlng": [-14.592295, 175.516296],
-    "sol": "182"
+    "sol": "Sol 182"
   },
   {
     "Title": "Husband Hill",
     "Content": "This 360 panorama view of the Inner Basin was taken from Husband Hill over the course of Sols 672-677 and is made up of 405 images.  The images are color filtered to enhance differences in terrain features.  Husband Hill is visible on the right and left sides of the panorama, with McCool and Ramon Hills rising from the horizon in the center.",
     "Embed": "<img src='img/husband-hill.jpg' width='100%'></img>",
     "latlng": [-14.596458, 175.529702],
-    "sol": "672"
+    "sol": "Sol 672"
   },
   {
     "Title": "Lorre Ridge",
     "Content": "This image was taken on Sol 731 in the basin south of Husband Hill.  The image is evidence that Lorre Ridge, along with other landforms in the basin, is made up of basaltic rocks (solidified lava) similar to those found on earth.  These look to be vesicular rocks, formed by trapped gas bubbles which left holes in the rock as lava solidified around the gas.  These geologic findings could tell scientists more about how this area formed.",
     "Embed": "<img src='img/lorre-ridge.jpg' width='100%'></img>",
     "latlng": [-14.602085, 175.528607],
-    "sol": "731"
-  },
-  {
-    "Title": "Winter Haven",
-    "Content": "Winter Haven was so named because Spirit spent a Martian winter parked on it's slope so that it remained at an angle where its solar panels would be kept at optimal warmth to survive the -100 degree Celsius temperatures.  The images composing this panorama, known as the McMurdo panorama, were taken over a series of months between Sol 814-934.  The panorama captures great detail in the rover's surroundings, from volcanic rocks, meteorites, and the El Dorado sand dune field to the rock patterns of Home Plate.",
-    "Embed": "<img src='img/winter-haven.jpg' width='100%'></img>",
-    "latlng": [-14.608367, 175.528666],
-    "sol": "814-934"
+    "sol": "Sol 731"
   },
   {
     "Title": "Home Plate",
     "Content": "This rock formation is a part of Home Plate, a location unique for its layered rocks, which can tell scientists a lot about patterns of alternating erosion and deposition here, as well as how the area was formed.  It is speculated that these rocks formed after a volcanic explosion and were then altered over time by wind.",
     "Embed": "<img src='img/home-plate.jpg' width='100%'></img>",
     "latlng": [-14.607282, 175.528044],
-    "sol": "774"
+    "sol": "Sol 774"
+  },
+  {
+    "Title": "Winter Haven",
+    "Content": "Winter Haven was so named because Spirit spent a Martian winter parked on it's slope so that it remained at an angle where its solar panels would be kept at optimal warmth to survive the -100 degree Celsius temperatures.  The images composing this panorama, known as the McMurdo panorama, were taken over a series of months between Sol 814-934.  The panorama captures great detail in the rover's surroundings, from volcanic rocks, meteorites, and the El Dorado sand dune field to the rock patterns of Home Plate.",
+    "Embed": "<img src='img/winter-haven.jpg' width='100%'></img>",
+    "latlng": [-14.608367, 175.528666],
+    "sol": "Sols 814-934"
   }
+
 ]
