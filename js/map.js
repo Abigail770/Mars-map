@@ -74,12 +74,69 @@ function setup_map() {
    //var marker = L.marker([-1.9462,354.4734]).addTo(map);
    for (var i = 0; i < rovers.length; i++) {
        let icon;
+       let roverName = rovers[i][0];
        rovers[i][0] == 'Curiosity' ? icon = curiosityMarker : icon = spiritMarker;
         circle = new L.Marker([rovers[i][1],rovers[i][2]],{
             icon: icon
         })
             .bindPopup(rovers[i][0])
             .addTo(map);
+            
+            // Toggle story mode on rover icon click
+            circle.on('click', function() {
+                console.log(roverName);
+                if (roverName == 'Spirit'){
+                    $('#spirit-intro').modal('show');
+                    roverBasemaps['Spirit'].addTo(map);
+                    map.setMaxZoom(18);
+                    map.setMinZoom(12);
+                    map.fitBounds(roverPaths["Spirit"].getBounds());
+                    currentPath = roverPaths['Spirit'].addTo(map);
+
+                    // Load json data
+                    $.ajax("data/spirit.json", {
+                        dataType: "json",
+                        success: function (response) {
+                            var spirObj = response;
+                            toggle_story_mode(map, spirObj);
+                        }
+                    });
+                }
+                if (roverName == 'Opportunity'){
+                    $('#opportunity-intro').modal('show');
+                    roverBasemaps['Opportunity'].addTo(map);
+                    map.setMaxZoom(16);
+                    map.setMinZoom(9);
+                    map.fitBounds(roverPaths['Opportunity'].getBounds());
+                    currentPath = roverPaths['Opportunity'].addTo(map);
+
+                    // Load json data
+                    $.ajax("data/opportunity.json", {
+                        dataType: "json",
+                        success: function (response) {
+                            var opObj = response;
+                            toggle_story_mode(map, opObj);
+                        }
+                    });
+                }
+                if (roverName == 'Curiosity'){
+                    $('#curiosity-intro').modal('show');
+                    map.setMaxZoom(16);
+                    map.setMinZoom(10);
+                    roverBasemaps['Curiosity'].addTo(map);
+                    map.fitBounds(roverPaths['Curiosity'].getBounds());
+                    currentPath = roverPaths['Curiosity'].addTo(map);
+
+                    // Load json data
+                    $.ajax("data/curiosity.json", {
+                        dataType: "json",
+                        success: function (response) {
+                            var curObj = response;
+                            toggle_story_mode(map, curObj);
+                        }
+                    });
+                }
+            })
    };
 
     // Add main map markers
