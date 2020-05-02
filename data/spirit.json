@@ -1,12 +1,18 @@
 [
    {
     "Title": "Spirit Landing Site",
-    "Content": "This image mosaic taken by the Mars Exploration Rover Spirit's panoramic camera shows a new slice of martian real estate southwest of the rover's landing site. The landscape shows little variation in local topography, though a narrow peak only seven to eight kilometers away is visible on the horizon. A circular depression, similar to the one dubbed Sleepy Hollow, can be seen in the foreground.",
+    "Content": "This image mosaic taken by the panoramic camera onboard the Mars Exploration Rover Spirit shows the rover's landing site, the Columbia Memorial Station, at Gusev Crater, Mars. This spectacular view may encapsulate Spirit's entire journey, from lander to its final destination toward the east hills. On its way, the rover will travel 250 meters (820 feet) northeast to a large crater approximately 200 meters (660 feet) across, the ridge of which can be seen to the left of this image. To the right are the east hills, about 3 kilometers (2 miles) away from the lander.",
     "Embed": "<img src='img/spirit-landing.jpg' width='100%'></img>",
     "latlng": [-14.573257, 175.476862],
     "sol": "Sol 1"
    },
-    
+    {
+    "Title": "Bonneville Crater",
+    "Content": "The rim and interior of a crater nicknamed Bonneville dominate this 180-degree, false-color mosaic of images taken by the panoramic camera of NASA's Mars Exploration Rover Spirit. Spirit recorded this view on the rover's 68th sol, March 12, 2004, one sol after reaching this location. The rover remaining here in part to get this very high-resolution, color mosaic, from which scientists can gain insight about the depth of the surface material at Bonneville and make future observation plans.",
+    "Embed": "<img src='img/Bonneville.jpg' width='100%'></img>",
+    "latlng": [-14.569981, 175.48058],
+    "sol": "Sol 68"
+   },
   {
     "Title": "Engineering Flats",
     "Content": "This spot was named Engineering Flats after Spirit underwent four sols (Martian days) of repairs here on its right front wheel, in addition to other maintenance.  It is located in the Columbia Hills.  Also visible in this image is Hank's Hollow, where the rover also spent some time.",

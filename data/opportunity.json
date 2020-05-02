@@ -1,4 +1,25 @@
 [
+    {
+    "Title": "'Lion King' - Opportunity's landing site",
+    "Content": "This approximate true-color panorama, dubbed Lion King, shows Eagle Crater and the surrounding plains of Meridiani Planum. This panorama depicts a story of exploration including the rover's lander, a thorough examination of the outcrop, a study of the soils at the near-side of the lander, a successful exit from Eagle Crater and finally the rover's next destination, the large crater dubbed Endurance.",
+    "Embed": "<img src='img/lion-king.jpg' width='100%'></img>",
+    "latlng": [-1.948324, -5.525393],
+    "sol": "Sol 58"
+  },
+    {
+    "Title": "Heat Shield",
+    "Content": "This image from Opportunity's panoramic camera features the remains of the heat shield that protected the rover from temperatures of up to 2,000 degrees Fahrenheit as it made its way through the martian atmosphere. This two-frame mosaic was taken on the rover's 335th martian day, or sol, (Jan. 2, 2004).",
+    "Embed": "<img src='img/heat-shield.jpg' width='100%'></img>",
+    "latlng": [-1.954951, -5.513506],
+    "sol": "Sol 335"
+  },
+    {
+    "Title": "Near Victoria Crater",
+    "Content": "This view from Opportunity shows the tracks left by a drive executed with more onboard autonomy than has been used on any other drive by a Mars rover. Victoria Crater is in the background, at the top of the image. ",
+    "Embed": "<img src='img/near-victoria.png' width='100%'></img>",
+    "latlng": [-2.048042, -5.49737],
+    "sol": "Sol 1162"
+  },
   {
     "Title": "Endeavor Rim",
     "Content": "This image was taken on Dec 11, 2014 and captures Opportunity's robotic arm examining bedrock in the crater. Of interest to researchers was how these rocks got there and if they could have possibly been transported by water in the past.",
