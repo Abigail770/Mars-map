@@ -185,16 +185,19 @@ button:hover {
 #back-btn {
     margin: 10px;
     float: left;
+    font-size: 0.8em;
 }
 
 #next-btn {
     float: right;
     margin: 10px;
+    font-size: 0.8em;
 }
 
 #main-btn {
     margin: 10px;
     text-align: center;
+    font-size: 0.8em;
 }
 
 .disabled {
@@ -277,11 +280,17 @@ iframe {
     #back-btn {
         margin: 10px;
         float: left;
+        font-size: 1em;
     }
 
     #next-btn {
         float: right;
         margin: 10px;
+        font-size: 1em;
+    }
+    
+    #main-btn {
+        font-size: 1em;
     }
     
     .map-storymode {
