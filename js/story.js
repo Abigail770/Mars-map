@@ -41,6 +41,9 @@ function toggle_story_mode(map, selectedObj) {
         
         //// Hide home button in navbar
         $('#btn-home').addClass('disabled');
+        
+        ////Reset navbar title
+        $('.navbar-brand').html('Mars Rover Explorer');
 
 
         //// Reset map zoom bounds to default

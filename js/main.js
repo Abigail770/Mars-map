@@ -72,6 +72,7 @@ function main() {
         map.setMinZoom(12);
         map.fitBounds(roverPaths["Spirit"].getBounds());
         currentPath = roverPaths['Spirit'].addTo(map);
+        $('.navbar-brand').html('Spirit');
 
         // Load json data
         $.ajax("data/spirit.json", {
@@ -91,6 +92,7 @@ function main() {
         map.setMinZoom(9);
         map.fitBounds(roverPaths['Opportunity'].getBounds());
         currentPath = roverPaths['Opportunity'].addTo(map);
+        $('.navbar-brand').html('Opportunity');
 
         // Load json data
         $.ajax("data/opportunity.json", {
@@ -110,6 +112,7 @@ function main() {
         roverBasemaps['Curiosity'].addTo(map);
         map.fitBounds(roverPaths['Curiosity'].getBounds());
         currentPath = roverPaths['Curiosity'].addTo(map);
+        $('.navbar-brand').html('Curiosity');
 
         // Load json data
         $.ajax("data/curiosity.json", {
