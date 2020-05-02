@@ -299,5 +299,10 @@ iframe {
         bottom: 0px;
         height: auto;
     }
+    
+    .panel-btns {
+        left: inherit;
+        width: 50%;
+    }
 
 }
