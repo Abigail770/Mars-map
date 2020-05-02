@@ -20,6 +20,7 @@ function toggle_story_mode(map, selectedObj) {
         $('#spirit').show()
         $('#opportunity').show()
         $('#curiosity').show()
+        roverMarkers.addTo(map);
 
 
 
@@ -51,12 +52,13 @@ function toggle_story_mode(map, selectedObj) {
 
     } else {
         // Code to transition to story mode
-        obj = selectedObj
+        obj = selectedObj;
 
         //Hide Rover Selection Buttons
-        $('#spirit').hide()
-        $('#opportunity').hide()
-        $('#curiosity').hide()
+        $('#spirit').hide();
+        $('#opportunity').hide();
+        $('#curiosity').hide();
+        roverMarkers.remove();
 
         //// Hide basemap selector
         $('.leaflet-control-layers-toggle').hide()
