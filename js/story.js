@@ -66,6 +66,7 @@ function toggle_story_mode(map, selectedObj) {
         $('#panel').css({
             'display': 'block'
         });
+        $('#panel').scrollTop(0);
         
         //// Resize map for storymode
         $('#map').addClass('map-storymode');
