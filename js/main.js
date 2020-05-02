@@ -186,11 +186,13 @@ function main() {
     function next() {
         current++;
         loop();
+        $('#panel').scrollTop(0);
     }
 
     function prev() {
         current--;
         loop();
+        $('#panel').scrollTop(0);
     }
 
     $('#next-btn').on('click', function () {
