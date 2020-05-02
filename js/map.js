@@ -33,6 +33,9 @@ var roverPaths = {
     "Opportunity": null
 }
 
+// Feature group holding markers
+var roverMarkers = L.featureGroup();
+
 // The current path object that is being displayed.
 var currentPath = null;
 
@@ -61,13 +64,13 @@ function setup_map() {
    // Add Rover Markers
     var curiosityMarker = L.icon({
         iconUrl: 'img/curiosityMarker.png',
-        iconSize: [75,75],
+        iconSize: [65,65],
         iconAnchor: [37,37]
     });
     
     var spiritMarker = L.icon({
         iconUrl: 'img/spiritMarker.png',
-        iconSize: [75,75],
+        iconSize: [65,65],
         iconAnchor: [37,37]
     });
     
@@ -77,10 +80,11 @@ function setup_map() {
        let roverName = rovers[i][0];
        rovers[i][0] == 'Curiosity' ? icon = curiosityMarker : icon = spiritMarker;
         circle = new L.Marker([rovers[i][1],rovers[i][2]],{
-            icon: icon
+            icon: icon,
+            title: rovers[i][0] + ' Landing Site'
         })
-            .bindPopup(rovers[i][0])
-            .addTo(map);
+            //.bindPopup(rovers[i][0])
+            //.addTo(map);
             
             // Toggle story mode on rover icon click
             circle.on('click', function() {
@@ -137,7 +141,10 @@ function setup_map() {
                     });
                 }
             })
+       roverMarkers.addLayer(circle);
    };
+    
+    roverMarkers.addTo(map);
 
     // Add main map markers
     let markerIcon = L.icon({
