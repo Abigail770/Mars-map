@@ -42,6 +42,18 @@ button {
     border: 2px solid #7F5336;
 }
 
+#spirit, #opportunity, #curiosity {
+    background-color: #DDDDDD;
+}
+
+#spirit:hover, #opportunity:hover, #curiosity:hover {
+    background-color: rgb(87, 56, 36);
+}
+
+#navbar button {
+    width: auto;
+}
+
 button:hover {
     background-color: rgb(87, 56, 36);
 }
@@ -198,19 +210,19 @@ button:hover {
 }
 
 #back-btn {
-    margin: 10px;
+    margin: 5px;
     float: left;
     font-size: 0.8em;
 }
 
 #next-btn {
     float: right;
-    margin: 10px;
+    margin: 5px;
     font-size: 0.8em;
 }
 
 #main-btn {
-    margin: 10px;
+    margin: 5px;
     text-align: center;
     font-size: 0.8em;
 }
